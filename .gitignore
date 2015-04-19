@@ -1,0 +1,18 @@
+# rpmbuild
+Makefile
+Makefile.in
+*.tar.gz
+*.pyc
+*.spec
+*.log
+*.trs
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.log
+config.status
+configure
+compile
+install-sh
+missing
+spec.in
