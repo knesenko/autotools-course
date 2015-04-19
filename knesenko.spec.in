@@ -26,7 +26,8 @@ This package contains the %{package_name} files.
 %setup -q -n "%{package_name}-%{package_version}"
 
 %build
-%configure
+%configure \
+	--docdir="%{_docdir}/%{name}-%{version}"
 make %{?_smp_mflags}
 
 %install
@@ -36,6 +37,7 @@ make %{?_smp_mflags} install DESTDIR="%{buildroot}"
 %files
 %dir %{_datadir}/%{package_name}
 %{_datadir}/%{package_name}/*
+%doc README.md
 
 %changelog
 * Sun Apr 19 2015 Kiril Nesenko <knesenko@vmware.com> - 1.0.0_master

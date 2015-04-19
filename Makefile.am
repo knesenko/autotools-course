@@ -17,6 +17,10 @@ SUBDIRS = \
 	src \
 	$(NULL)
 
+dist_doc_DATA = \
+	README.md \
+	$(NULL)
+
 dist_noinst_DATA = \
 	knesenko.spec \
 	$(NULL)
