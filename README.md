@@ -1,6 +1,7 @@
 # RPM and YUM Cheatshit
 
 [RPM Cheatshit](http://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/)
+
 [Red Hat yum cheatshit](https://access.redhat.com/sites/default/files/attachments/rh_yum_cheatsheet_1214_jcs_print-1.pdf)
 
 # Autotools
@@ -84,3 +85,28 @@ Autotools = automake + autoconf + libtool
 - %{_docdir}            %{_datadir}/doc
 - %{buildroot}          %{_buildrootdir}/%{name}-%{version}-%{release}.%{_arch}
 - $RPM_BUILD_ROOT       %{buildroot}
+
+### Compile a package
+```./autogen.sh ; ./configure```
+
+### Create a distribution(tarball)
+```./autogen.sh ; ./configure; make dist```
+
+### Check a distribution before release
+```./autogen.sh ; ./configure; make distcheck```
+
+### Install a package to a tmp directory for tests
+```
+DESTDIR=/tmp/test-installation make install
+DESTDIR=/tmp/test-installation make install
+```
+
+### Build SRPM from tarball
+```./autogen.sh ; ./configure; make distcheck; rpmbuild -ts *.tar.gz```
+
+### Build RPM from a SRPM
+```./autogen.sh ; ./configure; make distcheck; rpmbuild --rebuild *.src.rpm```
+
+### Build RPM from a tarball
+```./autogen.sh ; ./configure; make distcheck; rpmbuild -tb *.tar.gz```
+
