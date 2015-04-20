@@ -1,17 +1,25 @@
-# Primaries for **Makefile.am**
+# RPM and YUM Cheatshit
 
-- PROGRAMS
-- LIBRARIES
-- LISP
-- PYTHON
-- JAVA
-- SCRIPTS
-- DATA
-- HEADERS
-- MANS
-- TEXINFOS
+[RPM Cheatshit](http://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/)
+[Red Hat yum cheatshit](https://access.redhat.com/sites/default/files/attachments/rh_yum_cheatsheet_1214_jcs_print-1.pdf)
 
-# Standard prefixes for Makefile.am and configure.ac
+# Autotools
+Autotools = automake + autoconf + libtool
+
+## Primaries for Makefile.am
+
+- **PROGRAMS**
+- **LIBRARIES**
+- **LISP**
+- **PYTHON**
+- **JAVA**
+- **SCRIPTS**
+- **DATA**
+- **HEADERS**
+- **MANS**
+- **TEXINFOS**
+
+## Standard prefixes for Makefile.am and configure.ac
 - prefix          = /usr/local
 - exec-prefix     = $(prefix)
 - bindir          = $(exec_prefix)/bin
