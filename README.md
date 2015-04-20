@@ -38,3 +38,7 @@
 - manext          = .1
 - manNext         = .N              (N = 1..9)
 - srcdir          = (compiled project root)
+- pkgdatadir
+- pkgincludedir
+- pkglibdir
+
