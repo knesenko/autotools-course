@@ -52,12 +52,12 @@ Autotools = automake + autoconf + libtool
 - pkglibdir
 
 ## Special meaning prefixes
-- check - The check prefix indicates products that are built only for testing purposes, and thus will not be installed at all.
-- noinst - The noinst prefix indicates that the listed products should be built, but not installed.
-- EXTRA - used to list programs that are conditionally built. Usually used to include directory recursivelly
+- **check** - The check prefix indicates products that are built only for testing purposes, and thus will not be installed at all.
+- **noinst** - The noinst prefix indicates that the listed products should be built, but not installed.
+- **EXTRA** - used to list programs that are conditionally built. Usually used to include directory recursivelly
 
 ## "Super" prefixes
-- dist - indicates a set of files that should be distributed (that is, included in the distribution package when "make dist" is executed).
+- **dist** - indicates a set of files that should be distributed (that is, included in the distribution package when "make dist" is executed).
 
 
 # RPM
