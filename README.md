@@ -11,7 +11,7 @@
 - MANS
 - TEXINFOS
 
-# Standard targets for Makefile.am and configure.ac
+# Standard prefixes for Makefile.am and configure.ac
 - prefix          = /usr/local
 - exec-prefix     = $(prefix)
 - bindir          = $(exec_prefix)/bin
@@ -42,3 +42,37 @@
 - pkgincludedir
 - pkglibdir
 
+## Special meaning prefixes
+- check - The check prefix indicates products that are built only for testing purposes, and thus will not be installed at all.
+- noinst - The noinst prefix indicates that the listed products should be built, but not installed.
+- EXTRA - used to list programs that are conditionally built. Usually used to include directory recursivelly
+
+## "Super" prefixes
+- dist - indicates a set of files that should be distributed (that is, included in the distribution package when "make dist" is executed).
+
+
+# RPM
+## Build Macros
+- %{_sysconfdir}        /etc
+- %{_prefix}            /usr
+- %{_exec_prefix}       %{_prefix}
+- %{_bindir}            %{_exec_prefix}/bin
+- %{_libdir}            %{_exec_prefix}/%{_lib}
+- %{_libexecdir}        %{_exec_prefix}/libexec
+- %{_sbindir}           %{_exec_prefix}/sbin
+- %{_sharedstatedir}    /var/lib
+- %{_datarootdir}       %{_prefix}/share
+- %{_datadir}           %{_datarootdir}
+- %{_includedir}        %{_prefix}/include
+- %{_infodir}           /usr/share/info
+- %{_mandir}            /usr/share/man
+- %{_localstatedir}     /var
+- %{_initddir}          %{_sysconfdir}/rc.d/init.d
+- %{_var}               /var
+- %{_tmppath}           %{_var}/tmp
+- %{_usr}               /usr
+- %{_usrsrc}            %{_usr}/src
+- %{_lib}               lib (lib64 on 64bit multilib systems)
+- %{_docdir}            %{_datadir}/doc
+- %{buildroot}          %{_buildrootdir}/%{name}-%{version}-%{release}.%{_arch}
+- $RPM_BUILD_ROOT       %{buildroot}
