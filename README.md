@@ -4,8 +4,16 @@
 
 [Red Hat yum cheatshit](https://access.redhat.com/sites/default/files/attachments/rh_yum_cheatsheet_1214_jcs_print-1.pdf)
 
+[RPM Builds By Fedora 1](https://fedoraproject.org/wiki/How_to_create_an_RPM_package#.25files_section)
+
+[RPM Builds By Fedora 2](http://fedoraproject.org/wiki/Packaging:Guidelines)
+
 # Autotools
 Autotools = automake + autoconf + libtool
+
+[Autoconf manual](https://www.gnu.org/software/autoconf/manual/autoconf.html)
+
+[Automake manual](https://www.gnu.org/software/automake/manual/automake.html)
 
 ## Primaries for Makefile.am
 
