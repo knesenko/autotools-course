@@ -18,6 +18,7 @@ SUBDIRS = \
 	$(NULL)
 
 dist_doc_DATA = \
+	AUTHORS \
 	README.md \
 	$(NULL)
 
