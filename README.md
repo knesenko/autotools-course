@@ -11,6 +11,12 @@ Autotools = automake + autoconf + libtool
 
 [Automake manual](https://www.gnu.org/software/automake/manual/automake.html)
 
+[Python packaging](https://fedoraproject.org/wiki/Packaging:Python)
+
+[Packaging ScripletSnippets](http://fedoraproject.org/wiki/Packaging:ScriptletSnippets)
+
+[Packaging User/Groups](https://fedoraproject.org/wiki/Packaging:UsersAndGroups?rd=Packaging/UsersAndGroups)
+
 ## Primaries for Makefile.am
 
 - **PROGRAMS**
@@ -109,6 +115,11 @@ Autotools = automake + autoconf + libtool
 ```
 DESTDIR=/tmp/test-installation make install
 DESTDIR=/tmp/test-installation make install
+```
+
+### Uninstall a package to a tmp directory for tests
+```
+DESTDIR=/tmp/test-installation make uninstall
 ```
 
 ### Build SRPM from tarball
