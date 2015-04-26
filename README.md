@@ -114,7 +114,6 @@ Autotools = automake + autoconf + libtool
 ### Install a package to a tmp directory for tests
 ```
 DESTDIR=/tmp/test-installation make install
-DESTDIR=/tmp/test-installation make install
 ```
 
 ### Uninstall a package to a tmp directory for tests
