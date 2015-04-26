@@ -4,10 +4,6 @@
 
 [Red Hat yum cheatshit](https://access.redhat.com/sites/default/files/attachments/rh_yum_cheatsheet_1214_jcs_print-1.pdf)
 
-[RPM Builds By Fedora 1](https://fedoraproject.org/wiki/How_to_create_an_RPM_package#.25files_section)
-
-[RPM Builds By Fedora 2](http://fedoraproject.org/wiki/Packaging:Guidelines)
-
 # Autotools
 Autotools = automake + autoconf + libtool
 
@@ -69,6 +65,11 @@ Autotools = automake + autoconf + libtool
 
 
 # RPM
+
+[RPM Builds By Fedora 1](https://fedoraproject.org/wiki/How_to_create_an_RPM_package#.25files_section)
+
+[RPM Builds By Fedora 2](http://fedoraproject.org/wiki/Packaging:Guidelines)
+
 ## Build Macros
 - %{_sysconfdir}        /etc
 - %{_prefix}            /usr
@@ -94,6 +95,7 @@ Autotools = automake + autoconf + libtool
 - %{buildroot}          %{_buildrootdir}/%{name}-%{version}-%{release}.%{_arch}
 - $RPM_BUILD_ROOT       %{buildroot}
 
+# BUILDS
 ### Compile a package
 ```./autogen.sh ; ./configure```
 
@@ -110,11 +112,11 @@ DESTDIR=/tmp/test-installation make install
 ```
 
 ### Build SRPM from tarball
-```./autogen.sh ; ./configure; make distcheck; rpmbuild -ts *.tar.gz```
+```./autogen.sh; ./configure; make distcheck; rpmbuild -ts *.tar.gz```
 
 ### Build RPM from a SRPM
-```./autogen.sh ; ./configure; make distcheck; rpmbuild --rebuild *.src.rpm```
+```./autogen.sh; ./configure; make distcheck; rpmbuild -ts *.tar.gz; rpmbuild --rebuild *.src.rpm```
 
 ### Build RPM from a tarball
-```./autogen.sh ; ./configure; make distcheck; rpmbuild -tb *.tar.gz```
+```./autogen.sh; ./configure; make distcheck; rpmbuild -tb *.tar.gz```
 
