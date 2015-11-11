@@ -23,7 +23,7 @@ dist_doc_DATA = \
 	$(NULL)
 
 dist_noinst_DATA = \
-	knesenko.spec \
+	autotools-course.spec \
 	$(NULL)
 
 dist_noinst_SCRIPTS = \

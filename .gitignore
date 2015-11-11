@@ -16,3 +16,4 @@ compile
 install-sh
 missing
 spec.in
+py-compile

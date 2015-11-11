@@ -6,6 +6,9 @@ MAINTAINERCLEANFILES = \
 
 dist_pkgdata_SCRIPTS = \
 	test.sh \
+	$(NULL)
+
+dist_autotoolslib_PYTHON = \
 	test.py \
 	$(NULL)
 

@@ -6,7 +6,7 @@ define([VERSION_FIX], [0])
 define([VERSION_NUMBER], VERSION_MAJOR[.]VERSION_MINOR[.]VERSION_FIX)
 define([VERSION_SUFFIX], [_master])
 
-AC_INIT([knesenko], VERSION_NUMBER[]VERSION_SUFFIX)
+AC_INIT([autotools-course], VERSION_NUMBER[]VERSION_SUFFIX)
 
 PACKAGE_RPM_VERSION="VERSION_NUMBER"
 PACKAGE_RPM_RELEASE="0.0.$(echo VERSION_SUFFIX | sed 's/^_//')"
@@ -34,11 +34,18 @@ AC_CHECK_PROGS([PYFLAKES], [pyflakes])
 AC_ARG_VAR([PEP8], [path to pep8 utility])
 AC_CHECK_PROGS([PEP8], [pep8])
 
+AM_PATH_PYTHON([2.6],, [AC_MSG_ERROR([Cannot find python])])
+
 AM_CONDITIONAL([PYTHON_SYNTAX_CHECK], [test "${enable_python_syntax_check}" = "yes"])
+
+autotoolsdir="\$(pkgdatadir)"
+AC_SUBST([autotoolsdir])
+autotoolslibdir="\$(pythondir)/autotools-course"
+AC_SUBST([autotoolslibdir])
 
 AC_CONFIG_FILES([
 	Makefile
-	knesenko.spec
+	autotools-course.spec
 	src/Makefile
 ])
 AC_OUTPUT
